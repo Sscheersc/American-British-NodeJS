@@ -15,7 +15,7 @@ suite('Functional Tests', () => {
             .send({ text: 'Mangoes are my favorite fruit.', locale: 'american-to-british' })
             .end((err, res) => {
                 assert.equal(res.status, 200);
-                assert.equal(res.body.translation, 'Mangoes are my favourite fruit.');
+                assert.equal(res.body.translation, 'Mangoes are my <span class="highlight">favourite</span> fruit.');
                 done();
             });
     });
